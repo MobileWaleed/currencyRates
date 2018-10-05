@@ -2,7 +2,7 @@
 Currency Rates is an android app which allows the user to see the live rates of several pair of currencies.The app updates its data every 10 seconds . The app also highlight whether the rate is rising or dropping by showing the appropraite color.
 
 <p align="center">
- <img src="https://user-images.githubusercontent.com/39981113/46549439-8ef0d480-c904-11e8-82dc-9c1462594a68.jpg" width="400"/>
+ <img src="https://user-images.githubusercontent.com/39981113/46550420-949be980-c907-11e8-9832-96f3e4ac136f.jpg" width="400"/>
 
 The application supports Android (API level 15) and above.
 
