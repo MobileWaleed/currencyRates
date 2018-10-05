@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingBottom="@dimen/list_item_padding"
+    android:paddingLeft="@dimen/activity_margin"
+    android:paddingRight="@dimen/activity_margin"
+    android:paddingTop="@dimen/list_item_padding">
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/arrow_height"
+        android:layout_marginRight="@dimen/arrow_margin_right"
+        android:src="@drawable/ic_trending_up_black_24dp"
+        android:tint="@color/rate_increase"
+        android:layout_centerVertical="true"/>
+
+
+
+    <TextView
+        android:id="@+id/symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/arrow"
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/rates_list_text"
+        android:text="EURUSD"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/rate_increase"
+        android:textSize="@dimen/rates_list_text"
+        android:text="1.171767"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>
