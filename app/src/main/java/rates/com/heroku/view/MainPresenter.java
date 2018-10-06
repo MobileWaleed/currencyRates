@@ -22,9 +22,11 @@ public class MainPresenter implements MainPresenterInterface {
     }
 
     @Override
-    public void getRates() {
-
-        getObservable().repeatWhen(completed -> completed.delay(10, TimeUnit.SECONDS)).subscribeWith(getObserver());
+    public void getRates(Boolean showRefreshing) {
+        if(showRefreshing) {
+            mvi.showWait();
+        }
+        getObservable().repeatWhen(completed -> completed.delay(10, TimeUnit.SECONDS)).subscribeWith(getObserver(showRefreshing));
     }
 
     public Observable<RateResult> getObservable(){
@@ -33,19 +35,24 @@ public class MainPresenter implements MainPresenterInterface {
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
-    public DisposableObserver<RateResult> getObserver(){
+    public DisposableObserver<RateResult> getObserver(Boolean showRefreshing){
         return new DisposableObserver<RateResult>() {
 
             @Override
             public void onNext(@NonNull RateResult ratesResponse) {
-
-                    mvi.toggleEmptyNotes(ratesResponse.getRates());
+                    if(showRefreshing) {
+                        mvi.removeWait();
+                    }else
+                    {
+                        mvi.stopRefreshing();
+                    }
+                    mvi.toggleEmptyRates(ratesResponse.getRates());
                     mvi.displayRates(ratesResponse);
             }
 
             @Override
             public void onError(@NonNull Throwable e) {
-
+                mvi.removeWait();
                 e.printStackTrace();
                 mvi.displayError("Error fetching Rates Data");
             }

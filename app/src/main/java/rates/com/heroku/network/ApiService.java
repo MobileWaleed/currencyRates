@@ -9,7 +9,7 @@ import rates.com.heroku.network.model.RateResult;
 import retrofit2.http.GET;
 
 public interface ApiService {
-    // Fetch all notes
+    // Fetch all rates
     @GET("rates")
     Observable<RateResult>fetchAllRates();
 

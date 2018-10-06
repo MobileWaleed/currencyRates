@@ -11,6 +11,9 @@ public interface MainViewInterface {
     void showToast(String s);
     void displayRates(RateResult ratesResponse);
     void displayError(String s);
-    void toggleEmptyNotes(List<Rate> rates);
+    void toggleEmptyRates(List<Rate> rates);
     ApiService getApiService();
+    void showWait();
+    void removeWait();
+    void stopRefreshing();
 }

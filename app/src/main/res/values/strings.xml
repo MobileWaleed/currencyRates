@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Heroku</string>
+    <string name="app_name">Currency Rates</string>
     <string name="rates">Currency Rates</string>
     <string name="msg_no_rates">No Rates</string>
 </resources>

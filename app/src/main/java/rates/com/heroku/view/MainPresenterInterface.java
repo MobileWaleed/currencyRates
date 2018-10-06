@@ -2,5 +2,5 @@ package rates.com.heroku.view;
 
 public interface MainPresenterInterface {
 
-    void getRates();
+    void getRates(Boolean showRefreshing);
 }
