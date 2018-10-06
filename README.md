@@ -10,6 +10,7 @@ The application supports Android (API level 15) and above.
 The app can be installed from the play store or can be built using the android studio 
 
 ## Play Store
+https://play.google.com/store/apps/details?id=rates.com.heroku
 
 ## Building with Android Studio
 The easiest way to build is to install Android Studio with Gradle . Once installed, then you can import the project into Android Studio:
