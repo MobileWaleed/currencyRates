@@ -18,11 +18,9 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.reactivex.disposables.CompositeDisposable;
 import rates.com.heroku.R;
 import rates.com.heroku.adapters.RatesAdapter;
 import rates.com.heroku.app.MyApplication;
-import rates.com.heroku.network.ApiClient;
 import rates.com.heroku.network.ApiService;
 import rates.com.heroku.network.model.Rate;
 import rates.com.heroku.network.model.RateResult;
